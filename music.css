@@ -1,0 +1,95 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+}
+
+.container {
+    height: 100vh;
+    width: 100%;
+    background-image: url(inter.jpeg);
+    background-size: cover;
+    background-position: center;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+/* Navbar */
+.nav ul {
+    display: flex;
+    justify-content: flex-end;
+    list-style: none;
+    padding: 10px 20px;
+}
+
+.nav li {
+    margin-left: 20px;
+}
+
+.nav a {
+    font-weight: 500; /* Updated to a standard value */
+    color: rgb(42, 28, 28);
+    text-decoration: none;
+    padding: 5px 15px;
+}
+
+.nav a:hover {
+    color: crimson;
+}
+
+/* Left Column */
+.left-col h1 {
+    color: black;
+    font-size: 150px;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    margin-left: 20px;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.6);
+}
+
+/* Right Column */
+.right-col {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 50px;
+    color: crimson;
+    font-weight: 650;
+}
+
+.right-col img {
+    width: 100%; /* Makes image responsive */
+    max-width: 150px; /* Sets a maximum size */
+    cursor: pointer;
+}
+
+/* Mobile: Small Tablets and Below */
+@media (max-width: 768px) {
+    .left-col h1 {
+        font-size: 100px;
+    }
+
+    .right-col img {
+        width: 100%; /* Makes image responsive */
+        max-width: 120px;
+    }
+}
+
+/* Mobile: Extra Small Devices */
+@media (max-width: 480px) {
+    .left-col h1 {
+        font-size: 70px;
+        text-align: center;
+    }
+
+    .right-col img {
+        width: 100%; /* Makes image responsive */
+        max-width: 90px;
+        margin: 0 auto; /* Centers the image */
+    }
+}

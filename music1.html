@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Music Player</title>
+    <link rel="stylesheet" href="music1.css">
+</head>
+<body>
+    <div class="container">
+        <div class="content">
+            <h1 style="font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;">Music Haul</h1>
+            <div class="My music">
+                <audio id="audio" src="favtsong.mp3"></audio>
+                <div class="buttons">
+                    <button id="play" onclick="playMusic()">Play</button>
+                    <button id="stop" onclick="stopMusic()">Stop</button>
+                </div>
+                <p id="music-link"><a href="favtsong.mp3" target="_blank">Enjoy your day</a></p>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        const audio = document.getElementById('audio');
+
+        function playMusic() {
+            audio.play();
+            document.getElementById('play').disabled = true;
+            document.getElementById('stop').disabled = false;
+        }
+
+        function stopMusic() {
+            audio.pause();
+            // Keep the currentTime as is, so it continues from the last stopped point
+            document.getElementById('play').disabled = false;
+            document.getElementById('stop').disabled = true;
+        }
+    </script>
+</body>
+</html>
